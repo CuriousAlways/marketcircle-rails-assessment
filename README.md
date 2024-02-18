@@ -1,24 +1,14 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is assessment for [Marketcicle](https://github.com/Marketcircle/rails-assessment).
 
-Things you may want to cover:
+# setup
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+- `bundle install`
+  - install gem dependencies
+- `rails db:setup`
+  - It will initialize and seed database from json file
+- `rails s -p <port>`
+  - start server at specified port
+- `rspec`
+  - execute spec
