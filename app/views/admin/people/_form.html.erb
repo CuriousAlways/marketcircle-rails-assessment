@@ -1,0 +1,43 @@
+<%= form_with(model: [:admin, person]) do |form| %>
+  <% if person.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(person.errors.count, "error") %> prohibited this person from being saved:</h2>
+
+      <ul>
+        <% person.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div>
+    <%= form.fields_for :detail do |detail_form| %>
+      <div>
+        <%= form.label :title %>
+        <%= detail_form.select :title, ::Detail::TITLE.collect { |title| [title, title] } %>
+      </div>
+      <div>
+        <%= form.label :age %>
+        <%= detail_form.number_field :age %>
+      </div>
+      <div>
+        <%= form.label :email %>
+        <%= detail_form.email_field :email, required: true %>
+      </div>
+      <div>
+        <%= form.label :phone %>
+        <%= detail_form.phone_field :phone %>
+      </div>
+    <% end %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
