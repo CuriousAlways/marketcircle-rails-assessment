@@ -19,7 +19,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_02_17_053738) do
     t.integer "person_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["person_id"], name: "index_details_on_person_id"
+    t.index ["person_id"], name: "index_details_on_person_id", unique: true
   end
 
   create_table "people", force: :cascade do |t|

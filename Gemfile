@@ -43,6 +43,13 @@ group :development, :test do
   gem "debug", platforms: %i[ mri windows ]
 end
 
+group :test do
+  gem 'faker', '~> 3.2', '>= 3.2.3'
+  gem 'factory_bot_rails', '~> 6.4', '>= 6.4.3'
+  gem 'rspec-rails', '~> 6.1.0'
+  gem 'shoulda-matchers', '~> 6.1'
+end
+
 group :development do
   # Use console on exceptions pages [https://github.com/rails/web-console]
   gem "web-console"

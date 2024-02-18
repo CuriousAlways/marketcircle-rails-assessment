@@ -5,7 +5,7 @@ class CreateDetails < ActiveRecord::Migration[7.1]
       t.integer :age
       t.string :phone
       t.string :email
-      t.references :person, foreign_key: { to_table: :people }
+      t.references :person, foreign_key: { to_table: :people }, index: { unique: true }
 
       t.timestamps
     end
