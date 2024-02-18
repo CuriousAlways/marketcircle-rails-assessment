@@ -8,6 +8,7 @@ class Admin::PeopleController < ApplicationController
 
   # GET /admin/people/:id
   def show
+    @detail = @person.detail
   end
 
   # GET /admin/people/new

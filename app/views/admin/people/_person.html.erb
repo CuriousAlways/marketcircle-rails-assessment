@@ -1,6 +1,6 @@
 <div id="<%= dom_id person %>">
   <p>
-    <%= link_to person.name, admin_person_path(person) %>
+    <%= link_to person.name, admin_person_path(person), data: { "turbo-frame": 'person_details' } %>
   </p>
 
 </div>
