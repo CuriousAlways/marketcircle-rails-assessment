@@ -1,6 +1,6 @@
 # README
 
-This is assessment for [Marketcicle](https://github.com/Marketcircle/rails-assessment).
+This is assessment for [Marketcircle](https://github.com/Marketcircle/rails-assessment).
 
 # setup
 
