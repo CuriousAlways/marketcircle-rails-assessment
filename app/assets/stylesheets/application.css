@@ -13,3 +13,19 @@
  *= require_tree .
  *= require_self
  */
+
+.notice {
+  color: green;
+}
+
+.error {
+  color: red;
+}
+
+.people-container {
+  display: flex;
+}
+
+.people-list {
+  margin-right: 20px;
+}

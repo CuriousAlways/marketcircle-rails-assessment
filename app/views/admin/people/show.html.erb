@@ -1,9 +1,9 @@
-<p style="color: green"><%= notice %></p>
+<p class="notice"><%= notice %></p>
 
 <div> <%= link_to "Back to people", admin_people_path %> </div>
 
 <%= turbo_frame_tag 'person_details' do %>
-  <div>
+  <div class="people-info">
     <h1> <%= name_with_title(@person) %> </h1>
     <% if @detail.present? %>
       <p> email: <%= @detail.email %> </p>

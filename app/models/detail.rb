@@ -8,5 +8,6 @@ class Detail < ApplicationRecord
   #-------------------------------------------------------------------------------------
   # Validations
   #-------------------------------------------------------------------------------------
-  validates :email, presence: true, uniqueness: true, format: { with: ::URI::MailTo::EMAIL_REGEXP }
+  validates :email, presence: true
+  validates :email, uniqueness: true, format: { with: ::URI::MailTo::EMAIL_REGEXP }, allow_blank: true
 end

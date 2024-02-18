@@ -1,6 +1,6 @@
 <%= form_with(model: [:admin, person]) do |form| %>
   <% if person.errors.any? %>
-    <div style="color: red">
+    <div class="error">
       <h2><%= pluralize(person.errors.count, "error") %> prohibited this person from being saved:</h2>
 
       <ul>
